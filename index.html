@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+    <!--Import of Bootstrap Library-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+</head>
+<header>
+    <!--Title-->
+    <h1 class= "titleHead" align="center">My Visualizer</h1>
+    <!--Navigation Buttons-->
+    <nav>
+        <div class="row">
+            <div class="col gap-2 d-sm-flex" id="changeArray">
+                <button type="button" class="btn btn-outline-success btn-light changeArray">Change Array</button>
+            </div>
+            <div class="col" id="input">
+                <!--Changing Size of Array-->
+                <span id="size">Size of Array
+                    <input class="p-3" id="array_size" type="range" min="5" max="100" step=1 value=60>
+                </span>
+                <!--Changing Speed of Algorithm-->
+                <span id="speed">Speed of Algorithm
+                    <input class="p-3" id="speed_input" type="range" min="20" max="300" stepDown=10 value=60>
+                </span>
+            </div>
+            <!--Different Algorithm Buttons-->
+            <div class="col gap-2 d-sm-flex justify-content-end">
+                <button type="button" class="btn btn-outline-primary btn-light quickSort">Quick Sorting</button>
+                <button type="button" class="btn btn-outline-primary btn-light mergeSort">Merge Sorting</button>
+                <button type="button" class="btn btn-outline-primary btn-light insertionSort">Insertion Sorting</button>
+                <button type="button" class="btn btn-outline-primary btn-light selectionSort">Selection Sorting</button>
+            </div>
+        </div>
+    </nav>
+</header>
+<body class="p-3 mb-2 bg-light text-black">
+    <!--Algorithm Container Bars-->
+    <div id="bars" class="flex-container"></div>
+    <!--Footer-->
+    <footer class="footerMsg">
+        <p align="center" class="p-3">Adjust the Array's size, speed, and sorting method! Have fun!</p>
+    </footer>
+
+    <!--Algorithm File Imports-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <script src="Algorithms/sorting.js"></script>
+    <script src="Algorithms/merge.js"></script>
+    <script src="Algorithms/quick.js"></script>
+    <script src="Algorithms/insertion.js"></script>
+    <script src="Algorithms/selection.js"></script>
+</body>
+</html>
